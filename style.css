@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+
+}
+h1{
+    font-size: xx-large;
+}
+h3{
+    font-size:large;
+    margin-right: 20px;
+}
+.button{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 5px;
+}
+.button4{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 5px;
+    color: blue;
+}
+.Navigate-button{
+    background-color: lightblue;
+}
+.button1:hover{
+    scale: 1.1;
+    background-color: lightgreen;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.button2:hover{
+    scale: 1.1;
+    background-color: rgb(254, 149, 149);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.button3:hover{
+    scale: 1.1;
+    background-color: lightblue;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.Instance{
+    display: flex;
+    align-items: center;
+}

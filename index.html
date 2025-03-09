@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instance Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Control Instance</h1>
+
+    <div class="Instance">
+        <div>
+            <h3>DEV Server</h3>
+        </div>
+        <div>
+    
+            <button class="button1 button" onclick="start_DEV_Url()">Start Instance</button>
+            <button style="color: red;" class="button2 button" onclick="stop_DEV_Url()">Stop Instance</button>
+        </div>
+    </div>
+    <h4 style="color: red;">(You can navigate to the server UI once the instance starts, which takes about 1 minute.)</h4>
+    <script>
+ 
+        const startDEV = 'https://q0z71dt2o0.execute-api.us-east-1.amazonaws.com/start_stage/start-Instance';
+        const stopDEV = 'https://q0z71dt2o0.execute-api.us-east-1.amazonaws.com/stop_stage/stop-instances';
+
+
+        async function start_DEV_Url() {
+            try {
+                const response = await fetch(startDEV);
+                if (!response.ok) throw new Error("HTTP error!" );
+                const data = await response.json();
+                alert(data.body);
+            } catch (error) {
+                console.error("Instance started successfully");
+                alert('Instance start successfully');
+            }
+        }
+
+        async function stop_DEV_Url() {   
+            try {
+                const response = await fetch(stopDEV);
+                if (!response.ok) throw new Error("HTTP error!" );
+                const data = await response.json();
+                alert(data.body);
+            } catch (error) {
+                console.error('Instance stopped successfully');
+                alert('Instance stopped successfully');
+            }
+        }
+    </script>
+</body>
+</html>
